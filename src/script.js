@@ -1,41 +1,47 @@
 function addition (a, b) {
    return a + b;
 }
-// addition();
+
 console.log(addition(4, 5));
 
 function substracting(a, b){
     return a-b;
 
 }
-//substracting ();
 console.log(substracting(20, 6));
 
 
 function multiplication (a,b ){
     return a * b;
 }
-// multiplication ();
-console.log(multiplication(3, 6));
-
 
 function divide(a, b){
     return a /b;
-
 }
 divide();
-console.log(divide(50, 29));
+
+
 
 let numberOne= document.getElementById('one');
-console.log(numberOne);
+let numberTwo = document.getElementById('two');
+let numberThree = document.getElementById('three');
+let numberFour = document.getElementById('four');
+let numberFive = document.getElementById('five');
+let numberSix = document.getElementById('six');
+let numberSeven= document.getElementById('seven');
+let numberEight = document.getElementById('eight');
+let numberNine = document.getElementById('nine');
+let numberZero = document.getElementById('zero');
+let display= document.querySelector("#result");
+let buttons = document.querySelectorAll('button');
 
 
-possibleChoices.forEach((possibleChoice) =>
+
+
+buttons.forEach((possibleChoice) =>
 possibleChoice.addEventListener("click", (e) => {
-  playerChoice = e.target.id;
-  console.log(playerChoice);
-  playerSelection.innerHTML = playerChoice;
-  computerPlay()
-  oneRound()
+  inputNumber = e.target.id;
+  console.log(inputNumber);
+ 
 })
 );
