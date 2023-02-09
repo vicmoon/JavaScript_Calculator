@@ -3,3 +3,42 @@ body{
     background: black;
     color: aliceblue;
 }
+
+h1{
+    margin-top: 20px;
+}
+.container{
+    margin: 20px 20px 20px 20px;
+}
+.buttons 
+.first-row
+ .second-row {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 20px;
+}
+
+
+button{
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 100px;
+}
+#clear,
+#addition,
+#substract,
+#divide,
+#multiplicate,
+#result{
+    background: rgb(110, 124, 232);
+    
+}
+
+input {
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+}
