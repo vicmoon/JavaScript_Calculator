@@ -17,30 +17,32 @@ function multiplication (a,b ){
 
 function divide(a, b){
     return a /b;
-}
+}   
 divide();
 
+//connect the buttons with an event listener
+//convers the string to a number
+//connect the buttons to functions 
 
-
-let numberOne= document.getElementById('one');
-let numberTwo = document.getElementById('two');
-let numberThree = document.getElementById('three');
-let numberFour = document.getElementById('four');
-let numberFive = document.getElementById('five');
-let numberSix = document.getElementById('six');
-let numberSeven= document.getElementById('seven');
-let numberEight = document.getElementById('eight');
-let numberNine = document.getElementById('nine');
-let numberZero = document.getElementById('zero');
+let Numbers =[ 1,2,3,4,5,6,7,8,9,0]
+Numbers[0]= document.getElementById('one');
+Numbers[1] =document.getElementById('two');
+Numbers[2]= document.getElementById('three');
+Numbers[3] = document.getElementById('four');
+Numbers[4]= document.getElementById('five');
+Numbers[5]= document.getElementById('six');
+Numbers[6]= document.getElementById('seven');
+Numbers[7]= document.getElementById('eight');
+Numbers[8] = document.getElementById('nine');
+Numbers[9] = document.getElementById('zero');
 let display= document.querySelector("#result");
 let buttons = document.querySelectorAll('button');
 
 
 
-
 buttons.forEach((possibleChoice) =>
 possibleChoice.addEventListener("click", (e) => {
-  inputNumber = e.target.id;
+  inputNumber = (e.target.id);
   console.log(inputNumber);
  
 })
