@@ -43,6 +43,10 @@ button{
   
 }
 
+
+#clear {
+    width: 420px;
+}
 input {
     padding: 30px;
     width: 350px;
