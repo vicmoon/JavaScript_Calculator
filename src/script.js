@@ -24,7 +24,18 @@ function divide(a, b){
 const operatation (operator, a, b) => {
     a = Number(a);
     b= Number(b);
-}
+    switch(operator) {
+        case " +";
+        return addition( a,b);
+        case " - ";
+        return substracting (a,b);
+        case " * " ;
+        return multiplication(a,b);
+        case " / ";
+        return divide (a,b); 
+
+    }
+};
  
 
 
