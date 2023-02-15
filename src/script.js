@@ -21,6 +21,11 @@ function divide(a, b){
     return a /b;
 }   
 
+const operatation (operator, a, b) => {
+    a = Number(a);
+    b= Number(b);
+}
+ 
 
 
 buttons.forEach((possibleChoice) =>
