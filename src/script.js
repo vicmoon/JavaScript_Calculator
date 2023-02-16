@@ -1,9 +1,9 @@
 const display = document.querySelector ("#display");
-const number= document.querySelectorAll(".number");
+const numberButton = document.querySelectorAll(".number");    
 const operator= document.querySelectorAll(".operator");
-const clear =document.querySelector("#clear");
-const back =document.querySelector("#back");
-
+const goBack =document.querySelector("#backspace");
+const equal =document.querySelector("#result");
+let currentNumber ;
 
 function addition (a, b) {
    return a + b;
@@ -21,28 +21,40 @@ function divide(a, b){
     return a /b;
 }   
 
-const operatation (operator, a, b) => {
-    a = Number(a);
-    b= Number(b);
-    switch(operator) {
-        case " +";
-        return addition( a,b);
-        case " - ";
-        return substracting (a,b);
-        case " * " ;
-        return multiplication(a,b);
-        case " / ";
-        return divide (a,b); 
-
-    }
-};
- 
+function updateDisplay (){
+    display.value =currentNumber;    
+}
 
 
-buttons.forEach((possibleChoice) =>
-possibleChoice.addEventListener("click", (e) => {
-  inputNumber = (e.target.id);
-  console.log(inputNumber);
- 
-})
-);
+function buttonClicked(event){  
+   
+   if (currentNumber == null){
+    currentNumber= event.target.innerText;
+   } else {
+    newSelectedNumber = event.target.innerText;
+    newNumber = currentNumber.toString() + newSelectedNumber.toString();
+    currentNumber= parseInt(newNumber);
+    console.log(currentNumber);
+
+   }
+
+   updateDisplay();
+}
+
+for (i=0; i < numberButton.length; i++){
+    numberButton[i].addEventListener('click', buttonClicked);
+    
+
+}
+
+function clearInput() {
+    let clearAll =document.querySelector("#display");
+    console.log(clearAll);
+    if (clearAll.value != " ") {
+        clearAll.value ="";
+  }
+
+  clearAll.addEventListener('click', clearInput);
+}
+
+
