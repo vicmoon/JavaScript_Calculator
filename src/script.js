@@ -13,16 +13,17 @@ let secondNumber;
 const operation = (operator, a, b) => {
     a = Number(a);
     b= Number(b);
+    console.log("Operation: " + a + operator +b);
     switch(operator) {
-        case " +":
+        case "+":
         return addition( a,b);
-        case " - ":
+        case "-":
         return substracting (a,b);
-        case " * " :
+        case "*" :
         return multiplication(a,b);
-        case " / ":
+        case "/":
         return divide (a,b); 
-
+        default: console.log("Default");
     }
 };
 
@@ -71,6 +72,13 @@ for (i=0; i < operatorButton.length; i++){
 }
 
 
+function showResult (){
+    if (currentOperator && firstNumber && currentNumber){
+        operation(currentOperator, firstNumber, secondNumber)
+    } 
+}
+
+let resultDisplay = equal.addEventListener('click', showResult);
 
 
 function clearInput() {
