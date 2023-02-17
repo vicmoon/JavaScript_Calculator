@@ -44,7 +44,7 @@ function buttonNumberClicked(event){
     console.log(currentNumber);
    }
 
-   updateDisplay();
+    updateDisplay();
 }
 
 for (i=0; i < numberButton.length; i++){
@@ -81,6 +81,15 @@ function showResult (){
 let resultDisplay = equal.addEventListener('click', showResult);
 
 
+
+function showOperationResult(){
+    console.log ('Hello')
+    
+}
+let operationResult = equal.addEventListener('click',showOperationResult);
+
+
+
 function clearInput() {
     let clearAll =document.querySelector("#display");
     if (clearAll.value != " ") {
@@ -92,22 +101,22 @@ function clearInput() {
 }
 
 
-function addition (a, b) {
+function addition (a,b) {
     console.log(a,b);
-    console.log(a +b);
+    console.log(a+b);
     return a + b;
 
 }
 
-function substracting(a, b){
+function substracting(a,b){
     return a-b;
 }
 
-function multiplication (a,b ){
+function multiplication (a,b){
     return a * b;
 }
 
-function divide(a, b){
+function divide(a,b){
     if (b === 0) {
         return ("No division by 0")
     }
